@@ -38,7 +38,7 @@ string longestCommonPrefix(vector<string>& strs) {
 int main()  {
 
     vector<string> arrStr;
-    // vector<string> 입력받는 부분은 생
+    // vector<string> 입력받는 부분은 생략
     string answer = longestCommonPrefix(arrStr);
     std::cout<<answer<<endl;
     return 0;
