@@ -31,14 +31,14 @@ int main()  {
         for(int i=1;i<=9;i++)   {
             int k;
             scanf("%d", &k);
-            int temp;
+            int cnt;
             if(k % 2 == 0){
-                temp = min(k, 10);
+                cnt = min(k, 10);
             }else{
-                temp = min(k, 11);
+                cnt = min(k, 11);
             }
 
-            for(int j=0;j<temp;j++) {
+            for(int j=0;j<cnt;j++) {
                 num.push_back(i);
             }
         }
