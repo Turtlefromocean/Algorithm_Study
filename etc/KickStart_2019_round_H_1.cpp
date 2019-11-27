@@ -33,3 +33,38 @@ int main() {
 
     return 0;
 }
+
+/*
+ * 5점짜리 풀이
+
+int main()
+{
+    int testcase;
+    scanf("%d", &testcase);
+    for(int t=1;t<=testcase;t++)    {
+        int n;
+        scanf("%d", &n);
+        vector<int> cite;
+        vector<int> ans;
+        for(int i=0;i<n;i++)    {
+            int cnt;
+            scanf("%d", &cnt);
+            cite.push_back(cnt);
+            sort(cite.begin(), cite.end(), greater<int>());  // 이거때문에 TLE 발생 -> 우선순위큐로 해결
+            int idx = 0;
+            while(idx < cite.size())    {
+                if(cite[idx] <= idx) break;
+                idx++;
+            }
+            ans.push_back(idx);
+        }
+        printf("Case #%d: ", t);
+        for(int i=0;i<ans.size();i++)   {
+            printf("%d ", ans[i]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+ */
