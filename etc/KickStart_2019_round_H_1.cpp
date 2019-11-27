@@ -7,13 +7,13 @@
 
 using namespace std;
 
-vector<int> vec;
+vector<int> answer;
 int main() {
-    int t, n, score, x;
-    scanf("%d", &t);
-    for (int tt = 1; tt <= t; tt++) {
+    int testcase, n, score, x;
+    scanf("%d", &testcase);
+    for (int t = 1; t <= testcase; t++) {
         scanf("%d", &n);
-        vec.clear();
+        answer.clear();
         score = 0;
         priority_queue<int, vector<int>, greater<int>> pq;
         for (int i = 0; i < n; i++) {
@@ -24,10 +24,10 @@ int main() {
                 if (pq.size() >= score + 1) score++;
                 else break;
             }
-            vec.push_back(score);
+            answer.push_back(score);
         }
-        printf("Case #%d: ", tt);
-        for (int v : vec) printf("%d ", v);
+        printf("Case #%d: ", t);
+        for (int v : answer) printf("%d ", v);
         printf("\n");
     }
 
