@@ -12,13 +12,14 @@ int main(){
     //double 자료형을 저장하는 동적배열
     vector<double> vec2;
     //벡터의 초기 크기를 n으로 설정
-    int n;
+    int n = 3;
     vector<int> vec4(n);
 
     //벡터의 초기 크기를 n으로 설정하고 1로 초기화
     vector<int> vec5(n, 1);
 
     //크기가 n*m인 2차원 벡터를 선언하고 0으로 초기화
+    int m = 5;
     vector<vector<int> > vec6(n, vector<int>(m, 0));
 
     //벡터의 맨 뒤에 원소(5) 추가
