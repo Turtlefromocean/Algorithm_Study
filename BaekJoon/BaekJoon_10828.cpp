@@ -1,3 +1,5 @@
+// 백준 10828 스택
+
 #include <iostream>
 #include <stack>
 #include <string>
