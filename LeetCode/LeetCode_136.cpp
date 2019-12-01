@@ -1,6 +1,6 @@
 //
 // Created by 신지영 on 2019/12/01.
-// 217. Contains Duplicate
+// 136. Single Number
 //
 
 #include <iostream>
@@ -12,17 +12,16 @@ using namespace std;
 
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& nums) {
+    int singleNumber(vector<int>& nums) {
+
         unordered_set<int> us;
 
         for(int i = 0; i < nums.size(); i++)    {
-            if(us.count(nums[i]) == 1)  {
-                return true;
-            }
+            if(us.count(nums[i]) == 1) us.erase(nums[i]);
             else us.insert(nums[i]);
         }
 
-        return false;
+        return *us.begin();
     }
 };
 
@@ -53,18 +52,14 @@ vector<int> stringToIntegerVector(string input) {
     return output;
 }
 
-string boolToString(bool input) {
-    return input ? "True" : "False";
-}
-
 int main() {
     string line;
     while (getline(cin, line)) {
         vector<int> nums = stringToIntegerVector(line);
 
-        bool ret = Solution().containsDuplicate(nums);
+        int ret = Solution().singleNumber(nums);
 
-        string out = boolToString(ret);
+        string out = to_string(ret);
         cout << out << endl;
     }
     return 0;
